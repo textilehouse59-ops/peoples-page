@@ -1,5 +1,6 @@
-import { useState } from 'react'
-
+import { useEffect, useState } from 'react'
+import { supabase } from './supabaseClient.js'
+import CursorFollower from './CursorFollower.jsx'
 const CITIES = [
   'All Pakistan',
   'Karachi',
@@ -40,6 +41,7 @@ export default function App() {
 
   return (
     <div className="app">
+      <CursorFollower />
       <div className="glow glow-one" aria-hidden="true" />
       <div className="glow glow-two" aria-hidden="true" />
 
